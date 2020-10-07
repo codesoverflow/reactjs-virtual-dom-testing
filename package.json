@@ -1,5 +1,5 @@
 {
-  "name": "javascript-stream-merger",
+  "name": "reactjs-virtual-dom-testing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,11 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-infinite-scroll-component": "^5.1.0",
     "react-scripts": "3.4.3"
   },
   "homepage": "https://www.codesoverflow.com/wp-content/uploads/recorder/"

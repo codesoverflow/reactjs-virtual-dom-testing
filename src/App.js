@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
+import Container from '@material-ui/core/Container';
 import './App.css';
+import  ImageCard  from "./Components/List";
 
 
 
 
 const App = () => {
   
-return <div>Testing</div>
+return <Container fixed >
+    <ImageCard />
+</Container>
   
 }
 
