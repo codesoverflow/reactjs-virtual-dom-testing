@@ -3,6 +3,7 @@ import { FixedSizeList as List } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
 
 import ImageCard from './ImageCard'
+import FixedForm from './FixedForm'
 
 const getArrayItems = () => {
   return  Array.from(Array(10).keys())
@@ -14,6 +15,8 @@ export default function AlignItemsList() {
     return getArrayItems()
   })
 
+  const [name, setName] = useState('')
+
   const loadMoreItems = () => {
     console.log('called' + list.length)
     const newList = getArrayItems()
@@ -23,12 +26,13 @@ export default function AlignItemsList() {
 
 
   return (
-    
+    <>
+    <FixedForm outsideName={name} setOutsideName={setName} />
     <InfiniteLoader
         isItemLoaded={() => {
           return true
         }}
-        itemCount={1000}
+        itemCount={10000}
         loadMoreItems={loadMoreItems}
     >
 
@@ -49,7 +53,7 @@ export default function AlignItemsList() {
         
       
     </InfiniteLoader>
-    
+    </>
   );
 }
 

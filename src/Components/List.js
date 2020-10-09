@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import ImageCard from './ImageCard'
+import FixedForm from './FixedForm'
+
 
 const getArrayItems = () => {
-  return  Array.from(Array(10).keys())
+  return  Array.from(Array(100).keys())
 }
 
 export default function AlignItemsList() {
@@ -12,9 +14,11 @@ export default function AlignItemsList() {
   const [list, setList] = useState(() => {
     return getArrayItems()
   })
+  const [name, setName] = useState('')
 
   return (
-    
+    <>
+    <FixedForm outsideName={name} setOutsideName={setName} />
     <InfiniteScroll
       dataLength={list.length}
       next={() => {
@@ -34,6 +38,6 @@ export default function AlignItemsList() {
         
       
       </InfiniteScroll>
-    
+    </>
   );
 }
